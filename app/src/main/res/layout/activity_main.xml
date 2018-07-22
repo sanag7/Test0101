@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="49dp"
+        android:layout_marginBottom="17dp"
+        android:onClick="addClick"
+        android:text="+"
+        app:layout_constraintBottom_toTopOf="@+id/result"
+        app:layout_constraintEnd_toStartOf="@+id/subtractButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number2" />
+
+    <Button
+        android:id="@+id/subtractButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:layout_marginTop="27dp"
+        android:onClick="subtractClick"
+        android:text="-"
+        app:layout_constraintBottom_toTopOf="@+id/result"
+        app:layout_constraintEnd_toStartOf="@+id/multiplyButton"
+        app:layout_constraintStart_toEndOf="@+id/addButton"
+        app:layout_constraintTop_toBottomOf="@+id/number2" />
+
+    <Button
+        android:id="@+id/multiplyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:layout_marginTop="27dp"
+        android:onClick="multiplyClick"
+        android:text="*"
+        app:layout_constraintBottom_toTopOf="@+id/result"
+        app:layout_constraintEnd_toStartOf="@+id/devideButton"
+        app:layout_constraintStart_toEndOf="@+id/subtractButton"
+        app:layout_constraintTop_toBottomOf="@+id/number2" />
+
+    <Button
+        android:id="@+id/devideButton"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="328dp"
+        android:layout_marginTop="27dp"
+        android:onClick="devideClick"
+        android:text="/"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/multiplyButton"
+        app:layout_constraintTop_toBottomOf="@+id/number2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/number1"
+        android:layout_width="362dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="73dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="첫 번째 숫자"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/addButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/number2"
+        android:layout_width="362dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="27dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:hint="두 번째 숫자"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/addButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number1"
+        app:layout_constraintVertical_bias="0.51"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="362dp"
+        android:layout_height="53dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="92dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:gravity="right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number2" />
+
+    <ImageButton
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/result"
+        app:srcCompat="?android:attr/textSelectHandleRight" />
+
+</android.support.constraint.ConstraintLayout>
