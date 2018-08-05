@@ -1,6 +1,7 @@
 package com.ebookfrenzy.calculator3;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
@@ -19,6 +20,7 @@ public class Adapter extends PagerAdapter{
     private Context context;
 
     public Adapter(Context context){
+        super();
         this.context = context;
     }
 
@@ -30,16 +32,17 @@ public class Adapter extends PagerAdapter{
 
     @Override
     public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
-        return view == ((LinearLayout)object);
+        return view == (object);
     }
 
-    public Object instantiateitem(ViewGroup container, int position) {
+    @Override
+    public Object instantiateItem(ViewGroup container, int position) {
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View v = inflater.inflate(R.layout.slider, container, false);
         ImageView imageView = (ImageView) v.findViewById(R.id.imageView2);
         TextView textView = (TextView) v.findViewById(R.id.textView2);
         imageView.setImageResource(images[position]);
-        textView.setText((position + 1));
+        textView.setText(Integer.toString(position + 1));
         container.addView(v);
         return v;
     }

@@ -16,6 +16,7 @@ import android.support.v4.view.ViewPager;
 
 
 public class MainActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +45,14 @@ public class MainActivity extends AppCompatActivity {
         double n2 = Double.parseDouble(number2.getText().toString());
         result.setText(String.valueOf(n1 + n2));
     }
+
+    //public void addClick(int v){
+
+    //   int i=0;
+    //    String str = addString(i);
+    //    int result = addString(i);
+    //}
+
     public void subtractClick(View v) {
         EditText number1 = (EditText) findViewById(R.id.number1);
         EditText number2 = (EditText) findViewById(R.id.number2);
